@@ -23,7 +23,7 @@ const {
 } = require('../../scripts/lib/install/request');
 
 const {
-  loadInstallManifests,
+  loadInstallManifests, // eslint-disable-line no-unused-vars
   listInstallComponents,
   resolveInstallPlan,
 } = require('../../scripts/lib/install-manifests');
@@ -564,7 +564,7 @@ function runTests() {
     const projectDir = fs.mkdtempSync(path.join(os.tmpdir(), 'selective-install-project-'));
 
     try {
-      const result = execFileSync('node', [
+      execFileSync('node', [
         scriptPath,
         '--profile', 'core',
         '--with', 'capability:security',
